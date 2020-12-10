@@ -48,6 +48,8 @@ Initially, the starter code had a harded coded value for the goal. This had to m
 
 Once the start, goal are defined, the A* start algorithm will be called from the planning_utils.py code. Here, the started code had only 4 actions defined, which are North, South, East and West movement. In addition to these motions, diagonal movements were added under the class Action() from line 55 and within valid_action() from line 85. The cost of a diagonal movement was specified to be sqrt 2. 
 
+The following picture clearly illustrates the difference between the code with the diagonal movement enabled (Left Path) and without it (Right Path). 
+![](/Images/A_star.png)
 **7. Cull waypoints**
 
 The waypoints that were derived from the A-Star Algorithm, multiple points which are not necessary such as WP lying on the same line. This can be eliminated by using the collinerity principle. This is done within the planning_util.py code in line 160, where the prune() function defines the points and checks for collinearity according to the function in line 181. 
