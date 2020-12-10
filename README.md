@@ -22,7 +22,7 @@ The starter code for motion planning provided along with the course is similar t
 
   • Backyard Flyer code:
   
-  After the drone has reached a specific altitude, the state changes from the Take-off to Waypoint which is in between lines 49-53. The waypoints are hand coded into a function called calculate_box() which is called in line 51 and is defined in line 114. The state will be in waypoints until there are waypoints left to be reached. 
+  After the drone has reached a specific altitude, the state changes from the Take-off to Waypoint which is in between [line 49 to 53](backyard_flyer-py#L49-L53). The waypoints are hand coded into a function called calculate_box() which is called in [line 51](backyard_flyer-py#L51) and is defined in [line 141](backyard_flyer-py#L141). The state will be in waypoints until there are waypoints left to be reached. 
   
   • Motion Planning Starter code:
   
