@@ -52,4 +52,5 @@ Once the start, goal are defined, the A* start algorithm will be called from the
 
 The waypoints that were derived from the A-Star Algorithm, multiple points which are not necessary such as WP lying on the same line. This can be eliminated by using the collinerity principle. This is done within the planning_util.py code in line 160, where the prune() function defines the points and checks for collinearity according to the function in line 181. 
 
-[]/image/wP.png)
+[]/Images/wP.png)
+[]/Images/WP_1.png)
