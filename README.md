@@ -32,21 +32,21 @@ B) Waypoints:
  
 This was performed in between the lines 127 and 134 where we extract the lat and long from the collider.csv sheet. Then, we set it to the home position between line 136 - 139.
  
- **3. Retrieve your current position in geodetic coordinates then convert to local position
+ **3. Retrieve your current position in geodetic coordinates then convert to local position**
  
 global_to_local function was used in line 148 to derive the local positions using the current geodetic coordinates of the drone. 
 
-**4. Define start point as the current local position
+**4. Define start point as the current local position**
 
 Between line 158 to 160, the current local position is set as grid start. 
 
-**5. Modify this to be set as some arbitrary position on the grid given any geodetic coordinates 
+**5. Modify this to be set as some arbitrary position on the grid given any geodetic coordinates **
 
 Initially, the starter code had a harded coded value for the goal. This had to modified in such a way that the goal can be changed to an arbitary value of Long and Lat. Therefore, between lines 208-210, new arguments have been added which can be used to input the Lat, long and Altitude that is desired. Between the lines 167 and 171, the Lat and Long positions are converted into local posiitons using global_to_local(). 
 
-**6. Search algoritm --> A* with diagonal motion defined
+**6. Search algoritm --> A* with diagonal motion defined**
 
 Once the start, goal are defined, the A* start algorithm will be called from the planning_utils.py code. Here, the started code had only 4 actions defined, which are North, South, East and West movement. In addition to these motions, diagonal movements were added under the class Action() from line 55 and within valid_action() from line 85. The cost of a diagonal movement was specified to be sqrt 2. 
 
-**7. Cull waypoints
+**7. Cull waypoints**
 
