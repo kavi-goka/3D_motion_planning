@@ -31,7 +31,7 @@ The starter code for motion planning provided along with the course is similar t
  
  **2. Modify your code to read the global home location from the first line of the colliders.csv**
  
-This was performed in between the lines 127 and 134 where we extract the lat and long from the collider.csv sheet. Then, we set it to the home position between line 136 - 139.
+This was performed in between the [line 127 to 134](motion_planning.py#L127-L134) where we extract the lat and long from the collider.csv sheet. Then, we set it to the home position between [line 136 to 139](motion_planning.py#L136-L139).
  
  **3. Retrieve your current position in geodetic coordinates then convert to local position**
  
@@ -39,15 +39,15 @@ global_to_local function was used in line 148 to derive the local positions usin
 
 **4. Define start point as the current local position**
 
-Between line 158 to 160, the current local position is set as grid start. 
+Between line [line 158 to 160](motion_planning.py#L158-L160), the current local position is set as grid start. 
 
 **5. Modify this to be set as some arbitrary position on the grid given any geodetic coordinates**
 
-Initially, the starter code had a harded coded value for the goal. This had to modified in such a way that the goal can be changed to an arbitary value of Long and Lat. Therefore, between lines 208-210, new arguments have been added which can be used to input the Lat, long and Altitude that is desired. Between the lines 167 and 171, the Lat and Long positions are converted into local posiitons using global_to_local(). 
+Initially, the starter code had a harded coded value for the goal. This had to modified in such a way that the goal can be changed to an arbitary value of Long and Lat. Therefore, between [line 208 to 210](motion_planning.py#L208-L210), new arguments have been added which can be used to input the Lat, long and Altitude that is desired. Between the [line 167 to 171](motion_planning.py#L167-L171), the Lat and Long positions are converted into local posiitons using global_to_local(). 
 
 **6. Search algoritm --> A_star with diagonal motion defined**
 
-Once the start, goal are defined, the A* start algorithm will be called from the planning_utils.py code. Here, the started code had only 4 actions defined, which are North, South, East and West movement. In addition to these motions, diagonal movements were added under the class Action() from line 55 and within valid_action() from line 85. The cost of a diagonal movement was specified to be sqrt 2. 
+Once the start, goal are defined, the A* start algorithm will be called from the planning_utils.py code. Here, the started code had only 4 actions defined, which are North, South, East and West movement. In addition to these motions, diagonal movements were added under the class Action() from [line 55](planning_utils.py#L55) and within valid_action() from [line 85](planning_utils.py#L85). The cost of a diagonal movement was specified to be sqrt 2. 
 
 The following picture clearly illustrates the difference between the code with the diagonal movement enabled (Left Path) and without it (Right Path). 
 ![](/Images/A_star.png)
@@ -55,7 +55,7 @@ The following picture clearly illustrates the difference between the code with t
 
 **7. Cull waypoints**
 
-The waypoints that were derived from the A-Star Algorithm, multiple points which are not necessary such as WP lying on the same line. This can be eliminated by using the collinerity principle. This is done within the planning_util.py code in line 160, where the prune() function defines the points and checks for collinearity according to the function in line 181. 
+The waypoints that were derived from the A-Star Algorithm, multiple points which are not necessary such as WP lying on the same line. This can be eliminated by using the collinerity principle. This is done within the planning_util.py code in line 160, where the prune() function defines the points and checks for collinearity according to the function in [line 181](planning_utils.py#L181)
 
 In the following picture, we have on the right side which is the actual path and the left side is the pruned path. 
 ![](/Images/WP_1.png)
