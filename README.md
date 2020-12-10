@@ -50,9 +50,18 @@ Once the start, goal are defined, the A* start algorithm will be called from the
 
 The following picture clearly illustrates the difference between the code with the diagonal movement enabled (Left Path) and without it (Right Path). 
 ![](/Images/A_star.png)
+
+
 **7. Cull waypoints**
 
 The waypoints that were derived from the A-Star Algorithm, multiple points which are not necessary such as WP lying on the same line. This can be eliminated by using the collinerity principle. This is done within the planning_util.py code in line 160, where the prune() function defines the points and checks for collinearity according to the function in line 181. 
 
 In the following picture, we have on the right side which is the actual path and the left side is the pruned path. 
 ![](/Images/WP_1.png)
+
+
+**8. Excuting code**
+
+Below you can see the code working. 
+
+![](/Images/Code_working.gif)
