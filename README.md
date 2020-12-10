@@ -12,7 +12,7 @@ A) States and transitions:
 
   • The States and trasnitions for the motion planning starter code: 
 
-    Manual ---> Arming ---> *Planning* ---> Take-off ---> Waypoints ---> Landing ---> Disarm
+    Manual ---> Arming ---> **Planning** ---> Take-off ---> Waypoints ---> Landing ---> Disarm
 
    As seen from above, there is an extra state which is the planning which is called right after arming the drone. The line 67 calls the function self.plan_path().
 
